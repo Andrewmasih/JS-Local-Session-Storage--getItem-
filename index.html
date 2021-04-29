@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title> Tony's Barbers of Mayfair </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>  Play the 'Click' game for free!  </h1>
+    <h4> 'Win £10 Zilion' and a trip to Mars  </h4>
+    <P> You can win ! an amazing trip to the outback of Mars, venture through the rugged terrain,and see the best Mars alien animals in the wild.  </P>
+    <button onclick = "incrementCounter ()"> Click </button>
+    <button onclick = "showCounter ()"> ShowMe </button>
+
+    <script>
+      function incrementCounter () {
+       //to store an item,we use the 'getItem() method of either the 'localStorage' or 'sessionStorage' objects
+        let currentCounter = sessionStorage.setItem
+        ("counter") || 0;   
+
+        sessionStorage.setItem ("counter", ++ currentCounter);
+      };
+
+      function showCounter () {
+       
+        let currentCounter = sessionStorage.getItem
+        ("counter") || 0;        
+        alert ("you clicked the button:" + "times, You have lost!... try again!");
+      }
+      // if data is stored in key value pair, if we wanted to store the name "manchester united" in the browser, the key could be "name", and the value would be "manchester united". The code to save this in 'localStorage' would be. 'localStorage.setItem ("name", "manchester united");' if we want to retrieve the name,we would write: 'localStorage.getItem("name"); notice that we only need to supply the key when retrieving data'
+      
+
+    </script>
+  </body>
+</html>
